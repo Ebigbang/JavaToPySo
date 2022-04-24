@@ -1,11 +1,11 @@
 # JavaToPySo
 Java JNI接口重写 调用python执行so文件
-
+JavaToPySo.jar > libJavaToPySo.so(JavaToPySo.pyx main.c) > callentelect.py > ent_elect_model.so
 JavaToPySo--
 
           JavaToPySo.jar：Java JNI接口XXXFunction
                           JNI loadLibrary libJavaToPySo.so 文件前缀需要加lib 放于同文件夹或是java.library.path下
-          callentelect.py：执行算法入口py 带参分割数组 并调用算法so
+          callentelect.py： 执行算法入口py 带参逗号分割数组 并调用算法so
                             import os import sys 
                             argValue=sys.argv[1]
                             argValue = [ x.strip() for x in argValue.strip('[]').split(',') ]
